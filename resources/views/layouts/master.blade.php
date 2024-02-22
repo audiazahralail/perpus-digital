@@ -44,7 +44,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>membaca tahu segalanya</span></a>
+                    <span>selamat membaca guys!!</span></a>
                 </li>
 
              <!-- Nav Item - Charts -->
