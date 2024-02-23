@@ -35,11 +35,15 @@
                                         <td>{{ $b->penerbit }}</td>
                                         <td>{{ $b->tahun_terbit }}</td>
                                         <td>
-                                            <form action="{{route('buku.hapus',  $b->id) }}"  method="post">
+                                            <form action="{{route('buku.hapus', $b->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">Hapus</button >
-                                                </form>
+                                                <button type="submit" class="btn btn-danger">
+                                                <i class="fa fa-trash"></i>
+                                                </button>
+                                                <a href="{{ route('buku.edit', $b->id) }}" class="btn btn-primary">
+                                                    <i class="fas fa-fw fa-pen"></i>
+                                                </a>
                                         </td>
                                     
                                     </tr>

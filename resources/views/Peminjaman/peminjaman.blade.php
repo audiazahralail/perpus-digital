@@ -18,6 +18,9 @@
                                 + Tambah Data Peminjaman
                             </a>
                         </div>
+                        <a href="{{ route('print') }}" class=" btn btn-primary">
+                            <i class="fa fa-download"></i> Ekspor PDF</a>
+                        </div>
 
                         <table class="table table-bordered">
                             <thead>
