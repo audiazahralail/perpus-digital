@@ -17,7 +17,7 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    
+                                    <th><font color="black">Foto Buku</font></th>
                                     <th>Judul Buku</th>
                                     <th>Penulis</th>
                                     <th>Penerbit</th>
@@ -29,7 +29,10 @@
                             <tbody>
                                 @forelse ($buku as $b)
                                     <tr>
+                                        <td>
+                                            <img src="{{ asset('storage/' .$b->foto) }}" alt="Foto Buku" width="100">
                                         </td>
+                                        
                                         <td>{{ $b->judul }}</td>
                                         <td>{{ $b->penulis }}</td>
                                         <td>{{ $b->penerbit }}</td>
@@ -41,6 +44,7 @@
                                                 <button type="submit" class="btn btn-danger">
                                                 <i class="fa fa-trash"></i>
                                                 </button>
+                                            </form>
                                                 <a href="{{ route('buku.edit', $b->id) }}" class="btn btn-primary">
                                                     <i class="fas fa-fw fa-pen"></i>
                                                 </a>
