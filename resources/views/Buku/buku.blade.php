@@ -5,26 +5,27 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">List Buku</div>
+                    <div class="card-header"><th><font color="navy">LIST BUKU</font></th></div>
 
                     <div class="card-body">
                         <div class="mb-4">
                             <a href="{{route('buku.create')}}" class="btn btn-primary">
-                                + Tambah Data Buku
+                                + TAMBAH DATA BUKU
                             </a>
                         </div>
 
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th><font color="black">Foto Buku</font></th>
-                                    <th>Judul Buku</th>
-                                    <th>Penulis</th>
-                                    <th>Penerbit</th>
-                                    <th>Tahun Terbit</th>
-                                    <th>aksi</th>
-                                    
-                                </tr>
+                                    <tr bgcolor="royalblue" align=center>
+                                    <th><font color="white">FOTO BUKU</font></th>
+                                    <th><font color="white">JUDUL BUKU</font></th>
+                                    <th><font color="white">PENULIS</font></th>
+                                    <th><font color="white">SINOPSIS</font></th>
+                                    <th><font color="white">PENERBIT</font></th>
+                                    <th><font color="white">TAHUN TERBIT</font></th>
+                                    <th><font color="white">AKSI</font></th>
+                                </tr></tr>
                             </thead>
                             <tbody>
                                 @forelse ($buku as $b)
@@ -35,6 +36,7 @@
                                         
                                         <td>{{ $b->judul }}</td>
                                         <td>{{ $b->penulis }}</td>
+                                        <td>{{ $b->sinopsis }}</td>
                                         <td>{{ $b->penerbit }}</td>
                                         <td>{{ $b->tahun_terbit }}</td>
                                         <td>

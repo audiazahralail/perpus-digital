@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="mb-4">
                             <a href="{{route('kategori.create')}}" class="btn btn-primary">
-                                + Tambah Data Kategori
+                                + TAMBAH DATA KATEGORI
                             </a>
                         </div>
                     </div>
@@ -17,9 +17,10 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th class="px-4 py-2">Nama Kategori</th>
-                                    <th class="px-4 py-2">aksi</th>
-                                </tr>
+                                    <tr bgcolor="royalblue" align=center>
+                                    <th class="px-4 py-2"><font color="white">NAMA KATEGORI</font></th>
+                                    <th class="px-4 py-2"><font color="white">AKSI</font></th>
+                                </tr></tr>
                             </thead>
                             <tbody>
                                 @forelse ($kategori as $k)

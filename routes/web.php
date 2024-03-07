@@ -21,9 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [BukuController::class, 'welcome']);
 
 Auth::routes();
-
-Route::middleware('auth')->group(function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->middleware(['auth','verified'])->name('home');
+Route::middleware('auth','role:admin')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -40,15 +39,19 @@ Route::middleware('auth')->group(function () {
     Route::post('/buku/store', [BukuController::class, 'store'])->name('buku.store');
     Route::get('/buku/edit/{id}', [BukuController::class, 'edit'])->name('buku.edit');
     Route::delete('/buku/hapus/{id}', [BukuController::class, 'hapus'])->name('buku.hapus');
-    Route::patch('/buku/update/{id}', [BukuController::class, 'update'])->name('buku.update'); Route::delete('/buku/hapus/{id}', [BukuController::class, 'hapus'])->name('buku.hapus');
+    Route::put('/buku/update/{id}',[BukuController::class, 'update'])->name('buku.update');
+    Route::get('/buku/detail/{id}', [BukuController::class, 'show'])->name('buku.show');
     //peminjaman
     Route::get('/peminjaman', [PeminjamanController::class, 'index'])->name('peminjaman.index');
     Route::get('/peminjaman/tambah', [PeminjamanController::class, 'tambahPeminjaman'])->name('peminjaman.tambah');
     Route::post('/peminjaman/store', [PeminjamanController::class, 'storePeminjaman'])->name('peminjaman.store');
     Route::post('/peminjaman/selesai/{id}', [PeminjamanController::class, 'kembalikanBuku'])->name('peminjaman.kembalikan');
+
     //generate report
-    Route::get('/report', [PeminjamanController::class, 'print'])->name('print'); 
-
-
-
+    Route::get('/report', [PeminjamanController::class, 'print'])->name('print');
+    Route::get('/user/peminjaman', [PeminjamanController::class, 'userPeminjaman'])->name('peminjaman.user'); 
 });
+//user
+Route::get('/user/peminjaman',[peminjamanController::class, 'userPeminjaman'])->name('peminjaman.user')
+->middleware(['auth', 'role:user']);
+

@@ -43,8 +43,8 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('home')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>selamat membaca guys!!</span></a>
+                    <i class="fas fa-fw fa-database"></i>
+                    <span>DATA SEMUA</span></a>
                 </li>
                 @role('admin')
              <!-- Nav Item - Charts -->
@@ -67,7 +67,7 @@
                 <a class="nav-link" href="{{route('peminjaman.index')}}">
                     <i class="fas fa-fw fa-infinity"></i>
                     <span>DATA PEMINJAMAN</span></a>
-            </li>
+                </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -76,6 +76,14 @@
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
+            @endrole
+
+            @role('user')
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('peminjaman.user')}}">
+                    <i class="fas fa-fw fa-plus"></i>
+                    <span>Data Peminjaman</span></a>
+            </li>
             @endrole
             
 

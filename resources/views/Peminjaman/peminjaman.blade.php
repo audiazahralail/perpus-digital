@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body bg-white">
-                        <h1 class="h3 font-weight-bold mb-4">Data Peminjaman</h1>
+                        <h1 class="h3 font-weight-bold mb-4">DATA PEMINJAMAN</h1>
                         @if(session('success'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('success') }}
@@ -15,23 +15,24 @@
 
                         <div class="mb-4">
                             <a href="{{ route('peminjaman.tambah') }}" class="btn btn-primary">
-                                + Tambah Data Peminjaman
+                                + TAMBAH DATA PEMINJAMAN
                             </a>
                         </div>
                         <a href="{{ route('print') }}" class=" btn btn-primary">
-                            <i class="fa fa-download"></i> Ekspor PDF</a>
+                            <i class="fa fa-download"></i> EKSPOR PDF</a>
                         </div>
 
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th class="px-4 py-2">Nama Peminjam</th>
-                                    <th class="px-4 py-2">Buku yang Dipinjam</th>
-                                    <th class="px-4 py-2">Tanggal Peminjaman</th>
-                                    <th class="px-4 py-2">Tanggal Pengembalian</th>
-                                    <th class="px-4 py-2">Status</th>
-                                    <th class="px-4 py-2">Aksi</th>
-                                </tr>
+                                    <tr bgcolor="royalblue" align=center>
+                                    <th class="px-4 py-2"><font color="white">NAMA PEMINJAM</font></th>
+                                    <th class="px-4 py-2"><font color="white">BUKU YANG DIPINJAM</font></th>
+                                    <th class="px-4 py-2"><font color="white">TANGGAL PEMINJAMAN</font></th>
+                                    <th class="px-4 py-2"><font color="white">TANGGAL PENGEMBALIAN</font></th>
+                                    <th class="px-4 py-2"><font color="white">STATUS</font></th>
+                                    <th class="px-4 py-2"><font color="white">AKSI</font></th>
+                                </tr></tr>
                             </thead>
                             <tbody>
                                 @forelse($peminjaman as $p)

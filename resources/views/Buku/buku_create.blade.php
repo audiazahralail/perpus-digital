@@ -24,13 +24,13 @@
                             </div>
 
                             <div class="mb-4">
-                                <label for="foto" class="black text-sm font- medium text-gray-700">Foto Buku:</label>
-                                <input type="file" name="foto" accept="image/*" class="mt-1 p-2 border border-gray-300 rounded-md" required>
+                                <label for="penulis" class="form-label">Penulis:</label>
+                                <input type="text" name="penulis" class="form-control" required>
                             </div>
 
                             <div class="mb-4">
-                                <label for="penulis" class="form-label">Penulis:</label>
-                                <input type="text" name="penulis" class="form-control" required>
+                                <label for="sinopsis" class="form-label">sinopsis:</label>
+                                <input type="text" name="sinopsis" class="form-control" required>
                             </div>
 
                             <div class="mb-4">
@@ -50,6 +50,11 @@
                                         <option value="{{ $k->id }}">{{ $k->nama_kategori }}</option>
                                     @endforeach
                                 </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="foto" class="black text-sm font- medium text-gray-700">Foto Buku:</label>
+                                <input type="file" name="foto" accept="image/*" class="mt-1 p-2 border border-gray-300 rounded-md" required>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Simpan</button>
