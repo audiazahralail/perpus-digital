@@ -46,6 +46,7 @@ class BukuController extends Controller
             'sinopsis' => $request->sinopsis,
             'penerbit' => $request->penerbit,
             'tahun_terbit' => $request->tahun_terbit,
+            'aksi' => $request->aksi,
         ]);
 
         $buku->kategori()->attach($kategori);

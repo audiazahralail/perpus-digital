@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body bg-white">
-                        <h1 class="h3 font-weight-bold mb-4">DATA PEMINJAMAN</h1>
+                        <h1 class="h3 font-weight-bold mb-4"><th><font color="navy">DATA PEMINJAMAN</font></th></h1>
                         @if(session('success'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('success') }}

@@ -16,25 +16,26 @@
                     <div class="card-body">
                         <table class="table table stripped">
                             <tr>
-                                <th nowrap>Judul Buku: </th>
-                                <td nowrap>{{$buku->judul}}</td>
+                                <th >Judul Buku: </th>
+                                <td >{{$buku->judul}}</td>
                             </tr>
                             <tr>
-                                <th nowrap>Penulis: </th>
+                                <th >Penulis: </th>
                                 <td>{{$buku->penulis}}</td>
                             </tr>
                             <tr>
-                                <th nowrap>sinopsis: </th>
+                                <th >sinopsis: </th>
                                 <td>{{$buku->sinopsis}}</td>
                             </tr>
                             <tr>
-                                <th nowrap>Penerbit: </th>
+                                <th >Penerbit: </th>
                                 <td>{{$buku->penerbit}}</td>
                             </tr>
                             <tr>
-                                <th nowrap>Tahun Terbit: </th>
-                                <td nowrap>{{$buku->tahun_terbit}}</td>
+                                <th >Tahun Terbit: </th>
+                                <td >{{$buku->tahun_terbit}}</td>
                             </tr>
+                        
                         </table>
                     </div>
                 </div>
