@@ -34,9 +34,9 @@
                             <tr>
                                 <th >Tahun Terbit: </th>
                                 <td >{{$buku->tahun_terbit}}</td>
-                            </tr>
-                        
+                            </tr>                    
                         </table>
+                        <a href="/">kembali</a>
                     </div>
                 </div>
             </div>
